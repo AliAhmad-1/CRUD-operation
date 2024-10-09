@@ -1,15 +1,15 @@
 ## Crud operation with rest_framework and internationalization and localization
-#### Ket feuture:
-    ##### Managing translation files
+#### Key feuture:
+    **Managing translation files**
 
-    ##### Translating Python code
+    **Translating Python code**
 
-    ##### Translating templates
+    **Translating templates**
 
-    ##### Using Rosetta to manage translations
+    **Using Rosetta to manage translations**
 
-    ##### Allowing users to switch language
+    **Allowing users to switch language**
 
-    ##### Translating models using django-parler
-    
-    ##### Add api for project with rest_frameworl
+    **Translating models using django-parler**
+
+    **Add api for project with rest_frameworl**
