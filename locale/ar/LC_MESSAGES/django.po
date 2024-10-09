@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-08 14:05+0300\n"
+"PO-Revision-Date: 2024-10-09 11:55+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\Student\forms.py:7
+#| msgid "password"
+msgid "password(agin)"
+msgstr "كلمه السر (مرة اخرى)"
+
+#: .\Student\forms.py:24
+#| msgid "name"
+msgid "username:"
+msgstr "اسم المستخدم"
+
+#: .\Student\forms.py:24 .\Student\models.py:8
+msgid "e-mail"
+msgstr "البريد الالكتروني\""
+
+#: .\Student\forms.py:24 .\Student\models.py:10
+msgid "city"
+msgstr "المدينة"
+
+#: .\Student\forms.py:24 .\Student\models.py:9
+msgid "password"
+msgstr "كلمه السر"
+
+#: .\Student\models.py:7
+msgid "name"
+msgstr "اسم المستخدم"
+
+#: .\Student\templates\home.html:15
+msgid "Add New Student"
+msgstr "اضافه طالب جديد"
+
+#: .\Student\templates\home.html:100
+msgid "Show Student Information "
+msgstr "عرض معلومات الطلاب"
+
+#: .\Student\templates\home.html:106
+msgid "ID"
+msgstr "رقم المعرف"
+
+#: .\Student\templates\home.html:107
+msgid "Name"
+msgstr "اسم المستخدم"
+
+#: .\Student\templates\home.html:108
+#, fuzzy
+#| msgid "e-mail"
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: .\Student\templates\home.html:109
+msgid "City"
+msgstr "المدينة"
+
+#: .\Student\templates\home.html:110
+#, fuzzy
+#| msgid "password"
+msgid "Password"
+msgstr "كلمه السر"
+
+#: .\Student\templates\home.html:115
+#, python-format
+msgid ""
+"\n"
+"                    <td>%(row.id)s</td>\n"
+"                    <td>%(row.name)s</td>\n"
+"                    <td>%(row.email)s</td>\n"
+"                    <td>%(row.city)s</td>\n"
+"                    <td>%(row.password|truncatechars:5)s</td>\n"
+"                "
+msgstr ""
+
+#: .\Student\templates\home.html:123
+msgid "Update"
+msgstr "تحديث"
+
+#: .\Student\templates\home.html:124
+msgid "delete"
+msgstr "حذف"
+
+#: .\Student\templates\home.html:133
+msgid "No data found"
+msgstr "لا توجد بيانات"
+
+#: .\crud\settings.py:124
+msgid "English"
+msgstr "انكليزي"
+
+#: .\crud\settings.py:125
+msgid "Arabic"
+msgstr "عربي"

@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-08 14:05+0300\n"
+"PO-Revision-Date: 2024-10-08 14:15+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\Student\forms.py:7
+msgid "password(agin)"
+msgstr ""
+
+#: .\Student\forms.py:24
+msgid "username:"
+msgstr ""
+
+#: .\Student\forms.py:24 .\Student\models.py:8
+msgid "e-mail"
+msgstr ""
+
+#: .\Student\forms.py:24 .\Student\models.py:10
+msgid "city"
+msgstr ""
+
+#: .\Student\forms.py:24 .\Student\models.py:9
+msgid "password"
+msgstr ""
+
+#: .\Student\models.py:7
+msgid "name"
+msgstr ""
+
+#: .\Student\templates\home.html:15
+msgid "Add New Student"
+msgstr ""
+
+#: .\Student\templates\home.html:100
+msgid "Show Student Information "
+msgstr ""
+
+#: .\Student\templates\home.html:106
+msgid "ID"
+msgstr ""
+
+#: .\Student\templates\home.html:107
+msgid "Name"
+msgstr ""
+
+#: .\Student\templates\home.html:108
+msgid "Email"
+msgstr ""
+
+#: .\Student\templates\home.html:109
+msgid "City"
+msgstr ""
+
+#: .\Student\templates\home.html:110
+msgid "Password"
+msgstr ""
+
+#: .\Student\templates\home.html:115
+#, python-format
+msgid ""
+"\n"
+"                    <td>%(row.id)s</td>\n"
+"                    <td>%(row.name)s</td>\n"
+"                    <td>%(row.email)s</td>\n"
+"                    <td>%(row.city)s</td>\n"
+"                    <td>%(row.password|truncatechars:5)s</td>\n"
+"                "
+msgstr ""
+
+#: .\Student\templates\home.html:123
+msgid "Update"
+msgstr ""
+
+#: .\Student\templates\home.html:124
+msgid "delete"
+msgstr ""
+
+#: .\Student\templates\home.html:133
+msgid "No data found"
+msgstr ""
+
+#: .\crud\settings.py:124
+msgid "English"
+msgstr ""
+
+#: .\crud\settings.py:125
+msgid "Arabic"
+msgstr ""

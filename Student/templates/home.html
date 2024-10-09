@@ -1,0 +1,141 @@
+{% extends 'index.html' %}
+{% load widget_tweaks %}
+{% load i18n %}
+
+
+
+{% block title %}
+    {{block.super}}_home
+{% endblock title %}
+    
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-4">
+        <h5 class=" alert alert-info text-center">{% translate "Add New Student" %}</h5>
+        
+        {% if messages %}
+        
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show">
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        <strong> {{message.tags|capfirst}}! </strong>
+        {{message}} </div>
+            
+        {% endfor %}
+        {% endif %}
+            
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            {% comment %} for validition form in widget_tweaks{% endcomment %}
+
+
+
+
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger" role="alerts">
+        {%for error in form.non_field_errors%}
+        <p {%if forloop.last%} class="mb-0" {%endif%}>{{error}}</p>
+        {%endfor%}
+        </div>
+        {%endif%}
+
+        {% for field in form %}
+            <div class="form-group">
+            {{field.label_tag}}
+
+            {%if form.is_bound%}
+                {%if field.errors%}
+                {% render_field field class="form-control is-invalid" %}
+                    {%for error in field.errors%}
+                    <div class="invalid-feedback">{{error}}</div>
+                    {%endfor%}
+                {%else%}
+            {% render_field field class="form-control is-valid" %}
+                {%endif%}
+            {%else%}
+            {% render_field field class="form-control" %}
+            {%endif%}
+
+
+            </div>
+            {%if field.help_text%}
+            <small class="form-text text-muted">
+            {{field.help_text}}
+            </small>
+            {%endif%}
+
+        {% endfor %}
+
+
+            {% comment %} for validition form without widget_tweaks {% endcomment %}
+                        
+            {% comment %} {% for field in form %}
+                            {{field.label_tag}}
+                            <div load class="mb-3">{{field}}</div>
+                            <div>
+                                {% for error in field.errors %}
+                                <ul class="text-danger ">
+                                    <li> <span >{{error}}</span></li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                                {%if field.help_text %}
+                                <small class="form-text text-muted">
+                                    {{field.help_text}}
+                                </small>
+                                {%endif%}
+            {% endfor %} {% endcomment %}
+                
+
+            <input type="submit" value="{% translate "Add" %}" class="btn btn-outline-primary mt-2" id="btnsave">
+            </form>
+
+     
+    </div>
+    <div class="col-sm-7 ms-lg-5">
+        <h5 class=" alert alert-info text-center">{% translate "Show Student Information " %}</h5>
+
+            
+            {% if data %}
+            <table class="table table-responsive">
+                <tr>
+                    <th>{% translate "ID" %}</th>
+                    <th>{% translate "Name" %}</th>
+                    <th>{% translate "Email" %}</th>
+                    <th>{% translate "City" %}</th>
+                    <th>{% translate "Password" %}</th>
+                </tr>                
+            {% for row in data  %}
+   
+            <tr>
+            
+                <td>{{row.id}}</td>
+                    
+                <td>{{row.name}}</td>
+                <td>{{row.email|truncatechars:10}}</td>
+                <td>{{row.city}}</td>
+                <td>{{row.password|truncatechars:3}}</td>
+                
+                <td>
+                    <a href="{% url 'update' row.id %}" class="btn btn-outline-warning">{% translate "Update" %}</a>
+                    <a href="{% url 'delete' row.id %}" class="btn btn-outline-danger">{% translate "delete" %}</a>
+                </td>
+                
+
+            </tr>
+            {% endfor %}
+        </table>
+           
+            {% else %}
+            <h4 class="text-center text-dark mt-5">{% translate "No data found" %} </h4>
+            {% endif %}
+
+
+
+    </div>
+</div>
+
+
+{% endblock content %}
+    

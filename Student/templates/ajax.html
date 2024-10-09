@@ -1,0 +1,18 @@
+<script>
+    $('#btnsave').click(function() {
+        console.log('load ajax');
+        let name = $('#name').val();
+        let email = $('#email').val();
+        let password = $('#password').val();
+        my_data={name:name,email:email,password:password,csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()}
+        $.ajax({
+        url:"{% url 'add' %}",
+        type:"POST",
+        data:my_data,
+        success:function(data){
+        console.log(data.status)
+        }
+
+        });
+    })
+</script>
